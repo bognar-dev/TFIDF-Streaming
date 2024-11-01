@@ -4,6 +4,9 @@
 
 #include "PerformaceMonitor.h"
 
+
+
+
 void PerformanceMonitor::update_metrics(const Song &song, const std::unordered_map<std::string, double> &scores) {
     std::lock_guard<std::mutex> lock(metrics_mutex);
 

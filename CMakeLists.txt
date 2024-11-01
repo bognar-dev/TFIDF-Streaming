@@ -23,6 +23,13 @@ add_executable(TFIDF_Streaming main.cpp
 
 
 find_package(SQLite3)
-find_package(Boost)
-target_link_libraries(TFIFD_Streaming SQLite::SQLite3)
-target_link_libraries(TFIFD_Streaming boost::boost)
+find_package(nlohmann_json 3.11.3 REQUIRED)
+find_package(Boost REQUIRED COMPONENTS system asio)
+
+if (Boost_FOUND)
+    message(STATUS "Boost found")
+
+endif ()
+target_link_libraries(TFIDF_Streaming SQLite::SQLite3 nlohmann_json::nlohmann_json Boost::system Boost::asio)
+add_executable(client client.cpp)
+target_link_libraries(client Boost::system Boost::asio nlohmann_json::nlohmann_json)

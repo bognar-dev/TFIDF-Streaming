@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "TFIDF_Streaming_Bruno",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

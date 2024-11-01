@@ -7,17 +7,12 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
-#include <set>
-#include <memory>
-#include <cmath>
 #include <chrono>
-#include <sstream>
+#include <numeric>
 #include <algorithm>
-#include <queue>
+#include <iostream>
 #include <thread>
 #include <mutex>
-#include <condition_variable>
-#include <iostream>
 #include "Song.h"
 
 class PerformanceMonitor {
